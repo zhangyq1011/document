@@ -27,7 +27,30 @@
 		    </exclusions>
 		</dependency>
 		<!-- END 使用百度提供的 统一配置文件管理方案 END-->
-
+	注意：因为disconf-client 使用的httpclient版本为4.5.1 与本地项目使用版本有冲突因此请使用如下pom替换原来的引用:
+		<dependency>
+			<groupId>com.huaying.common</groupId>
+			<artifactId>huaying-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			 <exclusions>
+		    	<exclusion>
+		    		<groupId>org.apache.httpcomponents</groupId>
+            		<artifactId>httpclient</artifactId>
+		    	</exclusion>
+		    	<exclusion>
+		    		 <groupId>org.apache.httpcomponents</groupId>
+            		 <artifactId>httpmime</artifactId>
+		    	</exclusion>
+		    	<exclusion>
+		    		 <groupId>org.apache.httpcomponents</groupId>
+            		<artifactId>httpcore-nio</artifactId>
+		    	</exclusion>
+		    	<exclusion>
+		    		<groupId>org.apache.httpcomponents</groupId>
+            		<artifactId>httpcore</artifactId>
+		    	</exclusion>
+		    </exclusions>
+		</dependency>
 ## 1、创建配置文件类
 创建配置文件类：
 
