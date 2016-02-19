@@ -51,6 +51,11 @@
 		    	</exclusion>
 		    </exclusions>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.1</version>
+		</dependency>
 ## 1、创建配置文件类
 创建配置文件类：
 
