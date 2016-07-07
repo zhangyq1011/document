@@ -3,7 +3,7 @@
 #1.添加应用服务器过滤
 为配合日志记录明细及内容需要在web项目中的web.xml中添加一下过滤器：
 
-    <filter>
+       <filter>
 		<description>设置日志上下文过滤器</description>
 		<filter-name>slcf</filter-name>
 		<filter-class>com.huaying.common.web.filter.log.SetLoggingContextFilter</filter-class>
@@ -12,6 +12,7 @@
 		<filter-name>slcf</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+
     
 该过滤器抄袭阿里日志框架记录详细的访问URL有重要价值
 	
@@ -40,6 +41,12 @@
 
 ## 4.1 定义出错发送邮件appender
 
+<configuration>
+	 <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ 以下内容直接添加 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+	<property file="./logback.properties" />
+	<!--<property name="LOG_PATH" value="./logs/mall/mall-sso" />-->
+	<contextName>${contextName}</contextName>
+	
 	<appender name="EMAIL" class="ch.qos.logback.classic.net.SMTPAppender">  
         <smtpHost>${smtpHost}</smtpHost>  
         <smtpPort>${smtpPort}</smtpPort>  
@@ -70,6 +77,8 @@
             <onMismatch>DENY</onMismatch>      
         </filter>  
 	</appender>  
+	
+	<!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ 以上内容直接添加  ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
     
 ## 4.2 定义不同包日志保存到不同的日志文件中
 
