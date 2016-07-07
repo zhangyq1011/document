@@ -42,7 +42,6 @@
 ## 4.1 定义出错发送邮件appender
 
 <configuration>
-	 <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ 以下内容直接添加 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
 	<property file="./logback.properties" />
 	<!--<property name="LOG_PATH" value="./logs/mall/mall-sso" />-->
 	<contextName>${contextName}</contextName>
@@ -78,7 +77,6 @@
         </filter>  
 	</appender>  
 	
-	<!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ 以上内容直接添加  ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
     
 ## 4.2 定义不同包日志保存到不同的日志文件中
 
