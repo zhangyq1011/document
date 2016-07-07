@@ -41,9 +41,9 @@
 
 ## 4.1 定义出错发送邮件appender
 
-<configuration>
+
+       <configuration>
 	<property file="./logback.properties" />
-	<!--<property name="LOG_PATH" value="./logs/mall/mall-sso" />-->
 	<contextName>${contextName}</contextName>
 	
 	<appender name="EMAIL" class="ch.qos.logback.classic.net.SMTPAppender">  
