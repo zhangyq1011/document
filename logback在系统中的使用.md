@@ -43,7 +43,7 @@
 
 
        <configuration>
-	<property file="./logback.properties" />
+	<property resource="/logs/logback.properties" />
 	<contextName>${contextName}</contextName>
 	
 	<appender name="EMAIL" class="ch.qos.logback.classic.net.SMTPAppender">  
